@@ -4,7 +4,7 @@ The ugliest project participating to the [DigitalOcean MongoDB Hackathon](https:
 
 ## Communications
 
-Use the Telegram group TODO
+Use the [Telegram group](https://t.me/joinchat/SKXDx6mokoQ4MmVk)
 
 ## Copyright and License
 
