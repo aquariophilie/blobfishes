@@ -1,6 +1,6 @@
 # blobfishes
 
-The ugliest project participating to the DigitalOcean MongoDB Hackathon
+The ugliest project participating to the [DigitalOcean MongoDB Hackathon](https://www.digitalocean.com/mongodb-hackathon/).
 
 ## Communications
 
