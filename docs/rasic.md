@@ -2,9 +2,9 @@
 
 |Task|gmacario|Raffone17|GGn0|alv67|gteti|
 |--------------|-|-|-|-|-|
-|DB struct     | | |R|C|C|
-|dev.frontend  |A|C|I|R|I|
-|dev.Backend   | |R| |C|I|
+|DB struct     | | |R|S|S|
+|dev.frontend  |A|S|I|R|I|
+|dev.Backend   | |R| |S|I|
 |ops           |R| | |I|I|
 |deploy        |R| | |I|I|
 |documentation |I| | |I|R|
@@ -15,7 +15,7 @@ Reference: <https://en.wikipedia.org/wiki/Responsibility_assignment_matrix>
 |---|---------------|
 | R | _Responsible_ |
 | A | _Approval_    |
-| C | _Consulted_   |
+| S | _Support_     |
 | I | _Informed_    |
 
 <!-- EOF -->
