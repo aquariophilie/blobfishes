@@ -2,12 +2,12 @@
 
 |Task|gmacario|Raffone17|GGn0|alv67|gteti|
 |--------------|-|-|-|-|-|
-|DB struct     | | |R|S|S|
-|dev.frontend  |A|S|I|R|I|
-|dev.Backend   | |R| |S|I|
-|ops           |R| | |I|I|
-|deploy        |R| | |I|I|
-|documentation |I| | |I|R|
+|DB structure  | | |R|S|S|
+|Dev.frontend  |A|S|I|R|I|
+|Dev.backend   | |R| |S|I|
+|Ops           |R| | |I|I|
+|Deploy        |R| | |I|I|
+|Documentation |I| | |I|R|
 
 Reference: <https://en.wikipedia.org/wiki/Responsibility_assignment_matrix>
  
