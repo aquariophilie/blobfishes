@@ -9,8 +9,10 @@
 |Deploy        |R| | |I|I|
 |Documentation |I| | |I|R|
 
+## Explanation
+
 Reference: <https://en.wikipedia.org/wiki/Responsibility_assignment_matrix>
- 
+
 | X | Description   |
 |---|---------------|
 | R | _Responsible_ |
