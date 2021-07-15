@@ -1,8 +1,5 @@
 # RASI Chart for project blobfishes
 
-> Legend:
-> R: _Responsible_ , A: _Approval_ , C: _Consulted_, I: _Informed_
-
 |Task|gmacario|Raffone17|GGn0|alv67|gteti|
 |---|---|---|---|---|---|
 |DB struct|||R|C|C|
@@ -14,4 +11,11 @@
 
 Reference: <https://en.wikipedia.org/wiki/Responsibility_assignment_matrix>
  
+| X | Description   |
+|---|---------------|
+| R | _Responsible_ |
+| A | _Approval_    |
+| C | _Consulted_   |
+| I | _Informed_    |
+
 <!-- EOF -->
