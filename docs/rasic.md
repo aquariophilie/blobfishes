@@ -2,9 +2,9 @@
 
 |Task|gmacario|Raffone17|GGn0|alv67|gteti|
 |--------------|-|-|-|-|-|
-|DB structure  | | |R|S|S|
+|DB structure  |I| |R|S|S|
 |Dev.frontend  |A|S|I|R|I|
-|Dev.backend   | |R| |S|I|
+|Dev.backend   |I|R| |S|I|
 |Ops           |R| | |I|I|
 |Deploy        |R| | |I|I|
 |Documentation |I| | |I|R|
