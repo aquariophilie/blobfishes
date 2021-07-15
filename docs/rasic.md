@@ -7,7 +7,7 @@
 |Dev.backend   |I|R| |S|I|
 |Ops           |R| | |I|I|
 |Deploy        |R| | |I|I|
-|Documentation |I| | |I|R|
+|Documentation |R|I|S|S|S|
 
 ## Explanation
 
