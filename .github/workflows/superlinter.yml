@@ -24,6 +24,11 @@ jobs:
           DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           # Uncomment to exclude files from analysis
-          # FILTER_REGEX_EXCLUDE: fw-schctrl-eb271/BluetoothSerial_.*
+          # Skip .vscode/*.json (JSON files with comments not yet supported - see https://github.com/github/super-linter/issues/921)
+          FILTER_REGEX_EXCLUDE: .*vscode/.*.json
+          TYPESCRIPT_ES_CONFIG_FILE: .eslintrc.json
+          VALIDATE_JAVASCRIPT_ES: true
+          VALIDATE_TYPESCRIPT_STANDARD: false
+          VALIDATE_MARKDOWN: false
 
 # EOF

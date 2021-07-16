@@ -1,0 +1,42 @@
+{
+  "extends": "stylelint-config-standard",
+  "plugins": [
+    "stylelint-scss"
+  ],
+  "rules": {
+    "at-rule-no-unknown": null,
+    "scss/at-rule-no-unknown": true,
+    "scss/selector-no-redundant-nesting-selector": true,
+    "no-empty-source": null,
+    "selector-pseudo-class-no-unknown": [
+      true,
+      {
+        "ignorePseudoClasses": [
+          "::ng-deep"
+        ]
+      }
+    ],
+    "selector-pseudo-element-no-unknown": [
+      true,
+      {
+        "ignorePseudoElements": [
+          "ng-deep"
+        ]
+      }
+    ],
+    "no-duplicate-selectors": null,
+    "no-invalid-position-at-import-rule": null,
+    "value-keyword-case": null,
+    "indentation": [
+      4,
+      {
+        "ignore": [
+          "inside-parens"
+        ]
+      }
+    ],
+    "function-parentheses-newline-inside": null,
+    "declaration-colon-newline-after": null,
+    "value-list-comma-newline-after": null
+  }
+}

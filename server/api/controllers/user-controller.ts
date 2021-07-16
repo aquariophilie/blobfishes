@@ -126,10 +126,10 @@ export default class UserController {
     static async delete(ctx: Context, next: Next) {
         const authUser: IUser = ctx.state?.user?.data;
         const id = ctx.params.id;
+        const userService = container.get<UserService>(TYPES.UserService);
         if (!id) {
             throw createHttpError(400, 'Missing id');
-        }
-        const userService = container.get<UserService>(TYPES.UserService);
+        }  
         if (!authUser) {
             throw createHttpError(401, 'Access denied');
         }

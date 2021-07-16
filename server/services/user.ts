@@ -24,11 +24,11 @@ export class UserServiceImpl implements UserService {
     }
 
     async update(id: string, userData: IUser, authUser: IUser): Promise<IUser> {
-        const data = await this.userModel.findOne(id);
-        if (!data) {
+        const user = await this.userModel.findOne(id);
+        if (!user) {
             throw createHttpError(404, 'Not found');
         }
-        if (data._id !== authUser._id) {
+        if (user._id !== authUser._id) {
             throw createHttpError(403, 'Forbidden, you don\'t have enough permissions');
         }
         if (!this.userModel.validateUpdate(userData)) {
