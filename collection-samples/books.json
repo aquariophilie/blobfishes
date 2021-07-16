@@ -1,0 +1,113 @@
+[{
+    "_id": {
+        "$oid": "60f01c5be63786678fa5c459"
+    },
+    "title": "The Hitchhiker's Guide to the Galaxy",
+    "authors": [
+        {
+            "$oid": "60f02567e63786678fa5c45f"
+        }
+    ],
+    "genres": [
+        "science fiction",
+        "comedy"
+    ],
+    "location": "Living Room",
+    "owner": "Homer",
+    "reading": []
+},
+{
+    "_id": {
+        "$oid": "60f02464e63786678fa5c45a"
+    },
+    "title": "The Restaurant at the End of the Universe",
+    "authors": [
+        {
+            "$oid": "60f02567e63786678fa5c45f"
+        }
+    ],
+    "genres": [
+        "science fiction",
+        "comedy"
+    ],
+    "location": "Bedroom",
+    "owner": "Homer",
+    "reading": [
+        "Lisa"
+    ]
+},
+{
+    "_id": {
+        "$oid": "60f02497e63786678fa5c45b"
+    },
+    "title": "Life, the Universe and Everything",
+    "authors": [
+        {
+            "$oid": "60f02567e63786678fa5c45f"
+        }
+    ],
+    "genres": [
+        "science fiction",
+        "comedy"
+    ],
+    "location": "Bedroom",
+    "owner": "Homer",
+    "reading": []
+},
+{
+    "_id": {
+        "$oid": "60f024b4e63786678fa5c45c"
+    },
+    "title": "So Long, and Thanks for All the Fish",
+    "authors": [
+        {
+            "$oid": "60f02567e63786678fa5c45f"
+        }
+    ],
+    "genres": [
+        "science fiction",
+        "comedy"
+    ],
+    "location": "Attic",
+    "owner": "Homer",
+    "reading": []
+},
+{
+    "_id": {
+        "$oid": "60f024cde63786678fa5c45d"
+    },
+    "title": "Mostly Harmless",
+    "authors": [
+        {
+            "$oid": "60f02567e63786678fa5c45f"
+        }
+    ],
+    "genres": [
+        "science fiction",
+        "comedy"
+    ],
+    "location": "Attic",
+    "owner": "Homer",
+    "reading": []
+},
+{
+    "_id": {
+        "$oid": "60f024e3e63786678fa5c45e"
+    },
+    "title": "And Another Thing...",
+    "authors": [
+        {
+            "$oid": "60f02567e63786678fa5c45f"
+        },
+        {
+            "$oid": "60f02de9e63786678fa5c461"
+        }
+    ],
+    "genres": [
+        "science fiction",
+        "comedy"
+    ],
+    "location": "Attic",
+    "owner": "Homer",
+    "reading": []
+}]
