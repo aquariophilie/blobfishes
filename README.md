@@ -13,8 +13,10 @@ If you need some inspiration, look at this blobfish!
 
 Prerequisites:
 
-* docker
-* docker-compose
+* [Docker](https://www.docker.com/) version 20.10.6 or later
+* [Docker Compose](https://docs.docker.com/compose/) version 1.21.2 or later
+
+Run the following command from a shell:
 
 ```bash
 docker-compose up -d
