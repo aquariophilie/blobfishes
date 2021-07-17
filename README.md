@@ -9,6 +9,33 @@ The ugliest project participating to the [DigitalOcean MongoDB Hackathon](https:
 
 If you need some inspiration, look at this blobfish!
 
+## Running blobfishes
+
+Prerequisites:
+
+* [Docker](https://www.docker.com/) version 20.10.6 or later
+* [Docker Compose](https://docs.docker.com/compose/) version 1.21.2 or later
+
+Run the following command from a shell:
+
+```bash
+docker-compose up -d
+```
+
+### Rebuilding images from scratch
+
+```bash
+docker-compose up --build --force-recreate
+```
+
+### Local client development
+
+```bash
+cd client
+npm install
+npm run dev
+```
+
 ## Communications
 
 Use the [Telegram group](https://t.me/joinchat/SKXDx6mokoQ4MmVk)
