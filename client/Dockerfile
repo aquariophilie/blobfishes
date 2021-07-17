@@ -24,7 +24,7 @@ RUN npm install --silent
 COPY . .
 RUN npm run build
 # RUN ls -laR public/
-CMD ["ls", "-laR", "public/"]
+CMD ["ls", "-laR", "build/"]
 # -----------------------------------------------------------------
 #
 # EOF
