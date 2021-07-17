@@ -15,6 +15,7 @@ Prerequisites:
 
 * [Docker](https://www.docker.com/) version 20.10.6 or later
 * [Docker Compose](https://docs.docker.com/compose/) version 1.21.2 or later
+* [npm](https://docs.npmjs.com/) version 6.14.4 or later
 
 Run the following command from a shell:
 
