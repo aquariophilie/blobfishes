@@ -1,8 +1,7 @@
 # -----------------------------------------------------------------
-# Dockerfile for building the client
+# Dockerfile for building the blobfishes project
 # -----------------------------------------------------------------
-#
-FROM node:12.18-alpine
+FROM node:14.17.3-alpine
 #
 # -----------------------------------------------------------------
 # Default template for running Node.js apps in production mode
