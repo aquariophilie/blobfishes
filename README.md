@@ -30,6 +30,12 @@ docker-compose up --build --force-recreate
 
 ### Local client development
 
+Prerequisites:
+
+* [Node.js](https://nodejs.org/) version 14.17.3 or later
+
+Run the following command from a shell:
+
 ```bash
 cd client
 npm install
