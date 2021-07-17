@@ -1,8 +1,8 @@
 # -----------------------------------------------------------------
 # Dockerfile for building the client
 # -----------------------------------------------------------------
+FROM node:14.17.3-alpine
 #
-FROM node:12.18-alpine
 # ENV NODE_ENV=production
 WORKDIR /usr/src/app
 COPY ["package.json", "package-lock.json*", "npm-shrinkwrap.json*", "./"]
