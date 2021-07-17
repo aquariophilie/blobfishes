@@ -9,7 +9,7 @@ The ugliest project participating to the [DigitalOcean MongoDB Hackathon](https:
 
 If you need some inspiration, look at this blobfish!
 
-## Running blowfisher
+## Running blowfishes
 
 Prerequisites:
 
