@@ -6,9 +6,9 @@ services:
     server:
         build: .
         # restart: always
-        # ports:
-        #   - "3000:3000"
-        #   # - "80:3000"
+        ports:
+          - "3000:3000"
+          # - "80:3000"
         volumes:
             - ${PWD}/.env:/usr/src/app/.env:ro
         # command: [ "npm", "start" ]
