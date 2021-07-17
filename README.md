@@ -9,6 +9,31 @@ The ugliest project participating to the [DigitalOcean MongoDB Hackathon](https:
 
 If you need some inspiration, look at this blobfish!
 
+## Running blowfisher
+
+Prerequisites:
+
+* docker
+* docker-compose
+
+```bash
+docker-compose up -d
+```
+
+### Rebuilding images from scratch
+
+```bash
+docker-compose up --build --force-recreate
+```
+
+### Local client development
+
+```bash
+cd client
+npm install
+npm run dev
+```
+
 ## Communications
 
 Use the [Telegram group](https://t.me/joinchat/SKXDx6mokoQ4MmVk)
