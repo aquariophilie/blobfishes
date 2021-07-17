@@ -1,20 +1,19 @@
 version: '3'
 
 services:
-    client:
+    static-pages:
         build: client
-#   backend:
-#     # image: arol-webapp-prototype
-#     build: server
-#     # restart: always
-#     ports:
-#       - "3000:3000"
-#       # - "80:3000"
-#     #volumes:
-#     #  - ${PWD}/.env:/app/.env:ro
-#     # command: [ "npm", "start" ]
-#     # env_file: backend-prod.env
-#     env_file: .env
+    server:
+        build: .
+        # restart: always
+        ports:
+          - "3000:3000"
+          # - "80:3000"
+        volumes:
+            - ${PWD}/.env:/usr/src/app/.env:ro
+        # command: [ "npm", "start" ]
+        # env_file: backend-prod.env
+        # env_file: .env
 
 #  webview:
 #    build: webview
