@@ -1,5 +1,6 @@
 {
-  "name": "~TODO~",
+  "name": "ugly-frontend",
+  "description": "Frontend of the Blobfishes ugly app",
   "version": "0.0.1",
   "scripts": {
     "dev": "svelte-kit dev",
