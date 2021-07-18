@@ -23,6 +23,7 @@
 * <https://github.com/do-community/mongodb-resources>
 * <https://www.digitalocean.com/products/managed-databases/>
 * <https://cloud.digitalocean.com/apps/new?repo=https://github.com/do-community/node-express-api/tree/master>
+* [Atlas video -From SQL to NoSQL, Changing Your Mindset...](https://youtu.be/4TdVcfh1Kk8) - by MongoDB (40:46 YouTube Video)
 
 
 ## Introduction
