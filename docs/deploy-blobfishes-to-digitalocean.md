@@ -5,14 +5,16 @@
 * Introduction
 * Reference documents
 * Deploy blobfishes as a DigitalOcean Droplet
+  - Log in to DigitalOcean
+  - Create a project on DigitalOcean
+  - Spin a MongoDB cluster on DigitalOcean
   - Create a VM on DigitalOcean with Ubuntu-server 20.04.2 LTS 64-bit
   - Login to the VM via SSH
   - Install Docker and docker-compose
   - Clone blobfishes sources from GitHub
-  - Create a MongoDB cluster on DigitalOcean
   - Create file `.env` and fill-in credentials for MongoDB instance
-  - Run `docker-compose up -d`
-  - Test webapp locally: `curl -v http://localhost:3000/`
+  - Bring up the Docker application
+  - Test blobfish webapp locally
   - Open incoming ports on the VM
   - Test webapp remotely using a browser <http://vm_ip_address:3000>
 * Deploy blobfishes as a DigitalOcean App
@@ -83,11 +85,6 @@ Click "Skip for now".
 > * [Product documentation](https://docs.digitalocean.com/products/databases/mongodb/)
 
 Click "Remind me later".
-
-### Create a MongoDB instance on DigitalOcean
-
-Logged into the DO console, click on "New Managed Database"
-
 
 ### Spin a MongoDB cluster on DigitalOcean
 
@@ -203,15 +200,46 @@ TODO
 
 ### Create file `.env` and fill-in credentials for MongoDB instance
 
+```bash
+cp .env.example .env
+vi .env
+```
+
+Edit the `MONGODB_xxx` variables - example:
+
+```text
+MONGODB_NAME=TODO
+MONGODB_PASS=dbpass
+MONGODB_URI=TODO
+MONGODB_USER=dbuser
+```
+
 TODO
 
-### Run `docker-compose up -d`
+### Bring up the Docker application
 
+```bash
+docker-compose up -d
+```
+
+Result:
+
+```text
 TODO
+```
 
-### Test webapp locally: `curl -v http://localhost:3000/`
+### Test blobfish webapp locally
 
+```bash
+curl -v http://localhost:3000/
+```
+
+Result:
+
+```text
 TODO
+```
+
 
 ### Open incoming ports on the VM
 
