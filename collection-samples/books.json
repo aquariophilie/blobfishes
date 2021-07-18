@@ -15,7 +15,12 @@
     ],
     "location": "Living Room",
     "owner": "Homer",
-    "reading": []
+    "now_reading": [],
+    "read_by": [
+        {
+            "$oid": "60f02567e63786678000000b"
+        }
+    ]
 },
 {
     "_id": {
@@ -34,9 +39,12 @@
     ],
     "location": "Bedroom",
     "owner": "Homer",
-    "reading": [
-        "Lisa"
-    ]
+    "now_reading": [
+        {
+            "$oid": "60f02567e63786678000000b"
+        }
+    ],
+    "read_by": []
 },
 {
     "_id": {
@@ -55,7 +63,8 @@
     ],
     "location": "Bedroom",
     "owner": "Homer",
-    "reading": []
+    "now_reading": [],
+    "read_by": []
 },
 {
     "_id": {
@@ -74,7 +83,8 @@
     ],
     "location": "Attic",
     "owner": "Homer",
-    "reading": []
+    "now_reading": [],
+    "read_by": []
 },
 {
     "_id": {
@@ -93,7 +103,8 @@
     ],
     "location": "Attic",
     "owner": "Homer",
-    "reading": []
+    "now_reading": [],
+    "read_by": []
 },
 {
     "_id": {
@@ -115,5 +126,6 @@
     ],
     "location": "Attic",
     "owner": "Homer",
-    "reading": []
+    "now_reading": [],
+    "read_by": []
 }]
