@@ -20,7 +20,9 @@
 
 ## Reference documents
 
-* TODO
+* <https://github.com/do-community/mongodb-resources>
+* <https://www.digitalocean.com/products/managed-databases/>
+* <https://cloud.digitalocean.com/apps/new?repo=https://github.com/do-community/node-express-api/tree/master>
 
 
 ## Introduction
@@ -46,7 +48,9 @@ TODO
 
 TODO
 
-### Create a MongoDB cluster on DigitalOcean (#42)
+### Spin a MongoDB cluster on DigitalOcean
+
+Browse <https://cloud.digitalocean.com/databases/new?engine=mongodb>
 
 TODO
 
