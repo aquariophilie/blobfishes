@@ -1,4 +1,6 @@
-import authors from '../../json/authors.json'
+import db from '../../../json/db.js'
+
+let authors = db.authors
 
 export async function get (request) {
   return {

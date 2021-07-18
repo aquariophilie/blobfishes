@@ -1,15 +1,32 @@
-
 <script>
   import axios from 'axios'
   import { onMount } from 'svelte';
 
+  const apiPath = "/api/books"
+
   var books = []
 
   function getBooks() {
-    axios.get('/api/books')
+    axios.get(`${apiPath}`)
       .then((res) => {
         books = res.data
       })
+  }
+
+  function deleteBook(book) {
+		const path = `${apiPath}/${book.id}`;
+		axios.delete(path)
+			.then(() => {
+				getBooks();
+			})
+			.catch((error) => {
+				console.error(error);
+				getBooks();
+			});
+	};
+
+  function editBook(book) {
+
   }
 
   onMount(getBooks)
@@ -33,6 +50,9 @@
                 Name
               </th>
               <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                Author
+              </th>
+              <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                 Owner
               </th>
               <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
@@ -49,6 +69,11 @@
                 {book.title}
               </td>
               <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                {#each book.authors as author}
+                  <p><a href="/author/{author.id}">{author.name}</a></p>
+                {/each}
+              </td>
+              <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                 {book.owner}
               </td>
               <td class="px-6 py-4 whitespace-nowrap flex">
@@ -59,7 +84,8 @@
                 {/each}
               </td>
               <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                <a href="/" class="text-indigo-600 hover:text-indigo-900">Edit</a>
+                <button class="px-6 rounded-lg bg-gray-500 text-indigo-100 hover:text-indigo-900" on:click={editBook(book)}>Edit</button>
+                <button class="px-6 rounded-lg bg-gray-500 text-indigo-100 hover:text-indigo-900" on:click={deleteBook(book)}>Delete</button>
               </td>
             </tr>
             {/each}

@@ -2,10 +2,12 @@
     "_id": {
         "$oid": "60f01c5be63786678fa5c459"
     },
+    "id": 1,
     "title": "The Hitchhiker's Guide to the Galaxy",
     "authors": [
         {
-            "$oid": "60f02567e63786678fa5c45f"
+            "id": 1,
+            "name": "Douglas Adams"
         }
     ],
     "genres": [
@@ -20,10 +22,12 @@
     "_id": {
         "$oid": "60f02464e63786678fa5c45a"
     },
+    "id": 2,
     "title": "The Restaurant at the End of the Universe",
     "authors": [
         {
-            "$oid": "60f02567e63786678fa5c45f"
+            "id": 1,
+            "name": "Douglas Adams"
         }
     ],
     "genres": [
@@ -40,10 +44,12 @@
     "_id": {
         "$oid": "60f02497e63786678fa5c45b"
     },
+    "id": 3,
     "title": "Life, the Universe and Everything",
     "authors": [
         {
-            "$oid": "60f02567e63786678fa5c45f"
+            "id": 1,
+            "name": "Douglas Adams"
         }
     ],
     "genres": [
@@ -58,10 +64,12 @@
     "_id": {
         "$oid": "60f024b4e63786678fa5c45c"
     },
+    "id": 4,
     "title": "So Long, and Thanks for All the Fish",
     "authors": [
         {
-            "$oid": "60f02567e63786678fa5c45f"
+            "id": 1,
+            "name": "Douglas Adams"
         }
     ],
     "genres": [
@@ -76,10 +84,12 @@
     "_id": {
         "$oid": "60f024cde63786678fa5c45d"
     },
+    "id": 5,
     "title": "Mostly Harmless",
     "authors": [
         {
-            "$oid": "60f02567e63786678fa5c45f"
+            "id": 1,
+            "name": "Douglas Adams"
         }
     ],
     "genres": [
@@ -94,13 +104,16 @@
     "_id": {
         "$oid": "60f024e3e63786678fa5c45e"
     },
+    "id": 6,
     "title": "And Another Thing...",
     "authors": [
         {
-            "$oid": "60f02567e63786678fa5c45f"
+            "id": 2,
+            "name": "Eoin Colfer"
         },
         {
-            "$oid": "60f02de9e63786678fa5c461"
+            "id": 1,
+            "name": "Douglas Adams"
         }
     ],
     "genres": [

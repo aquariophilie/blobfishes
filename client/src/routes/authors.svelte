@@ -2,13 +2,31 @@
   import axios from 'axios'
   import { onMount } from 'svelte';
 
+  const apiPath = "/api/authors"
+
   var authors = []
 
   function getAuthors() {
-    axios.get('/api/authors')
+    axios.get(`${apiPath}`)
       .then((res) => {
         authors = res.data
       })
+  }
+
+  function deleteAuthor(author) {
+		const path = `${apiPath}/${author.id}`;
+		axios.delete(path)
+			.then(() => {
+				getAuthors();
+			})
+			.catch((error) => {
+				console.error(error);
+				getAuthors();
+			});
+	};
+
+  function editAuthor(author) {
+
   }
 
   onMount(getAuthors)
@@ -20,7 +38,6 @@
 </svelte:head>
 
 <h1>Authors of this Ugly collection of books</h1>
-
 
 <div class="flex flex-col">
   <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
@@ -49,7 +66,8 @@
                 {author.bio}
               </td>
               <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                <a href="/" class="text-indigo-600 hover:text-indigo-900">Edit</a>
+                <button class="px-6 rounded-lg bg-gray-500 text-indigo-100 hover:text-indigo-900" on:click={editAuthor(author)}>Edit</button>
+                <button class="px-6 rounded-lg bg-gray-500 text-indigo-100 hover:text-indigo-900" on:click={deleteAuthor(author)}>Delete</button>
               </td>
             </tr>
             {/each}
