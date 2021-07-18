@@ -1,0 +1,24 @@
+[{
+    "_id": {
+        "$oid": "60f02567e63786678000000a"
+    },
+    "name": "Homer",
+    "books_read": [],
+    "now_reading": []
+},
+{
+    "_id": {
+        "$oid": "60f02567e63786678000000b"
+    },
+    "name": "Homer",
+    "books_read": [
+        {
+            "$oid": "60f01c5be63786678fa5c459"
+        }
+    ],
+    "now_reading": [
+        {
+            "$oid": "60f02464e63786678fa5c45a"
+        }
+    ]
+}]
