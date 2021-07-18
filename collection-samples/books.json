@@ -3,6 +3,7 @@
         "$oid": "60f01c5be63786678fa5c459"
     },
     "title": "The Hitchhiker's Guide to the Galaxy",
+    "isbn": "0345391802",
     "authors": [
         {
             "$oid": "60f02567e63786678fa5c45f"
@@ -21,6 +22,7 @@
         "$oid": "60f02464e63786678fa5c45a"
     },
     "title": "The Restaurant at the End of the Universe",
+    "isbn": "0345391810",
     "authors": [
         {
             "$oid": "60f02567e63786678fa5c45f"
@@ -41,6 +43,7 @@
         "$oid": "60f02497e63786678fa5c45b"
     },
     "title": "Life, the Universe and Everything",
+    "isbn": "0671467263",
     "authors": [
         {
             "$oid": "60f02567e63786678fa5c45f"
@@ -59,6 +62,7 @@
         "$oid": "60f024b4e63786678fa5c45c"
     },
     "title": "So Long, and Thanks for All the Fish",
+    "isbn": "0330287001",
     "authors": [
         {
             "$oid": "60f02567e63786678fa5c45f"
@@ -77,6 +81,7 @@
         "$oid": "60f024cde63786678fa5c45d"
     },
     "title": "Mostly Harmless",
+    "isbn": "1509808388",
     "authors": [
         {
             "$oid": "60f02567e63786678fa5c45f"
@@ -95,6 +100,7 @@
         "$oid": "60f024e3e63786678fa5c45e"
     },
     "title": "And Another Thing...",
+    "isbn": "0141042133",
     "authors": [
         {
             "$oid": "60f02567e63786678fa5c45f"
