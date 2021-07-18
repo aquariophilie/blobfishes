@@ -21,9 +21,13 @@
 ## Reference documents
 
 * <https://github.com/do-community/mongodb-resources>
+* <https://github.com/do-community/node-express-api>
 * <https://www.digitalocean.com/products/managed-databases/>
 * <https://cloud.digitalocean.com/apps/new?repo=https://github.com/do-community/node-express-api/tree/master>
-* [Atlas video -From SQL to NoSQL, Changing Your Mindset...](https://youtu.be/4TdVcfh1Kk8) - by MongoDB (40:46 YouTube Video)
+* [MongoDB.live | July 13-14, 2021](https://www.mongodb.com/live)
+  - [Atlas Overview](https://youtu.be/vy8Vylvqohk) - by MongoDB (33:18 YouTube Video)
+  - [Jumpstart MongoDB Basics](https://youtu.be/W76yyd791js) - by MongoDB (48:37 YouTube Video)
+  - [Atlas video -From SQL to NoSQL, Changing Your Mindset...](https://youtu.be/4TdVcfh1Kk8) - by MongoDB (40:46 YouTube Video)
 
 
 ## Introduction
