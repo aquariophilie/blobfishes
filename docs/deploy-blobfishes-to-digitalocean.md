@@ -10,10 +10,10 @@
   - Spin a MongoDB cluster on DigitalOcean
   - Create a Droplet on DigitalOcean
   - Login to the VM via SSH
-  - Install Docker and docker-compose
+  - Install Docker and `docker-compose`
   - Clone blobfishes sources from GitHub
-  - Create file `.env` and fill-in credentials for MongoDB instance
-  - Bring up the Docker application
+  - Create file `.env` with connection info to the MongoDB instance
+  - Bring up blobfish webapp using `docker-compose`
   - Test blobfish webapp locally
   - Open incoming ports on the VM
   - Test webapp remotely using a browser <http://vm_ip_address:3000>
@@ -98,9 +98,9 @@ Click "Remind me later".
 
 ### Spin a MongoDB cluster on DigitalOcean
 
-Logged into the DigitalOcean console, expand section "MANAGE", then click "Databases"
+Logged into the DigitalOcean console, expand section "MANAGE", then click "Databases".
 
-Click "Create a Database Cluster"
+Click "Create a Database Cluster".
 
 <!-- Browse <https://cloud.digitalocean.com/databases/new?engine=mongodb> -->
 
@@ -180,7 +180,7 @@ Fill in the requested information
 * Choose a datacenter: Frankfurt 1
 * VPC Network: `default-fra1` (DEFAULT)
 * Finalize and create
-  - Choose a unique database cluser name: `db-mongodb-fra1-32806`
+  - Choose a unique database cluster name: `db-mongodb-fra1-32806`
   - Select project: `blobfishes`
 
 Then click "Create a Database Cluster".
@@ -188,6 +188,8 @@ Then click "Create a Database Cluster".
 <!-- 2021-07-18 23:04 CEST -->
 
 > Your database has been created
+
+<!-- TODO: Add screenshot -->
 
 TODO
 
@@ -201,7 +203,7 @@ TODO
 
 TODO
 
-### Install Docker and docker-compose
+### Install Docker and `docker-compose`
 
 TODO
 
@@ -209,7 +211,7 @@ TODO
 
 TODO
 
-### Create file `.env` and fill-in credentials for MongoDB instance
+### Create file `.env` with connection info to the MongoDB instance
 
 ```bash
 cp .env.example .env
@@ -227,7 +229,9 @@ MONGODB_USER=dbuser
 
 TODO
 
-### Bring up the Docker application
+### Bring up blobfish webapp using `docker-compose`
+
+TODO
 
 ```bash
 docker-compose up -d
@@ -241,6 +245,8 @@ TODO
 
 ### Test blobfish webapp locally
 
+TODO
+
 ```bash
 curl -v http://localhost:3000/
 ```
@@ -250,7 +256,6 @@ Result:
 ```text
 TODO
 ```
-
 
 ### Open incoming ports on the VM
 
