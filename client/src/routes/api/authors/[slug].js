@@ -5,7 +5,7 @@ const authors = db.authors
 export async function get (request) {
   try {
     const bid = request.params.slug
-    const book = await authors.find(({ id }) => id == bid)
+    const book = await authors.find(({ id }) => id === bid)
     return {
       status: 200,
       body: book
@@ -22,8 +22,8 @@ export async function get (request) {
 }
 
 export async function del (request) {
-  const bid = request.params.slug
-  const ret = authors.findIndex(({ id }) => id == bid)
+  const bid = parseInt(request.params.slug)
+  const ret = authors.findIndex(({ id }) => id === bid)
   if (ret >= 0) {
     authors.splice(ret, 1)
   }

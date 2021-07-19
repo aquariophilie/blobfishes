@@ -95,8 +95,6 @@
 
   onMount(getAuthors)
 
-
-
 </script>
 
 <svelte:head>
