@@ -48,6 +48,12 @@ See <https://docs.docker.com/engine/install/linux-postinstall/> for details.
    docker-compose logs -f
    ```
 
+   You may inspect the logs of one or more specific services by appending their names to the `docker-compose logs` command; for instance:
+
+   ```bash
+   docker-compose logs server
+   ```
+
 5. To shut down the server run the following command
 
    ```bash
