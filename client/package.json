@@ -1,5 +1,6 @@
 {
-  "name": "~TODO~",
+  "name": "ugly-frontend",
+  "description": "Frontend of the Blobfishes ugly app",
   "version": "0.0.1",
   "scripts": {
     "dev": "svelte-kit dev",
@@ -18,8 +19,11 @@
     "postcss-load-config": "^3.1.0",
     "svelte": "^3.34.0",
     "svelte-preprocess": "^4.7.4",
+    "sveltestrap": "^5.5.0",
     "tailwindcss": "^2.2.4"
   },
   "type": "module",
-  "dependencies": {}
+  "dependencies": {
+    "axios": "^0.21.1"
+  }
 }

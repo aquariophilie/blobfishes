@@ -7,5 +7,12 @@
 <Nav />
 
 <main>
-  <slot></slot>
+  <div class="px-6">
+    <slot></slot>
+  </div>
+
+
 </main>
+
+<style>
+</style>
