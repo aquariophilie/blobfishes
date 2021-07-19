@@ -22,10 +22,19 @@ Prerequisites:
 * [Docker](https://www.docker.com/) version 20.10.6 or later
 * [Docker Compose](https://docs.docker.com/compose/) version 1.21.2 or later
 
+**IMPORTANT**: Make sure that Docker is configured to be managed as an ordinary (non-root) user.
+See <https://docs.docker.com/engine/install/linux-postinstall/> for details.
+
 Run the following command from a shell:
 
 ```bash
 docker-compose up -d
+```
+
+You may check the server logs with the following command (type Ctrl-C to stop):
+
+```bash
+docker-compose logs -f
 ```
 
 ### Rebuilding the updated version of the Docker images
