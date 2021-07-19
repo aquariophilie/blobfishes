@@ -1,7 +1,6 @@
 import db from '../../../json/db.js'
 
-let books = db.books
-
+const books = db.books
 
 export async function get (request) {
   return {

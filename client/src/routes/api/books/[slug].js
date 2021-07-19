@@ -1,18 +1,17 @@
 
 import db from '../../../json/db.js'
 
-let books = db.books
+const books = db.books
 
-
-export async function get(request) {
+export async function get (request) {
   try {
-    const bid = request.params.slug   
-    const book = await books.find(({id}) => id == bid)
+    const bid = request.params.slug
+    const book = await books.find(({ id }) => id == bid)
     return {
       status: 200,
       body: book
     }
-  } catch(err) {
+  } catch (err) {
     return {
       status: 500,
       body: {
@@ -23,13 +22,12 @@ export async function get(request) {
   }
 }
 
-
-export async function del(request) {
+export async function del (request) {
   const bid = request.params.slug
-  let ret = books.findIndex(({id}) => id == bid)
+  const ret = books.findIndex(({ id }) => id == bid)
   if (ret >= 0) {
     books.splice(ret, 1)
-  } 
+  }
   return {
     status: 200,
     body: { i: ret }
