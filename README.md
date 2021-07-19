@@ -85,7 +85,7 @@ npm run dev
 
 Please create issues under <https://github.com/aquariophilie/blobfishes/issues>.
 
-For quick communications with the project maintainers use the [Telegram group](https://t.me/joinchat/SKXDx6mokoQ4MmVk).
+For quick communications with the project maintainers use this [Telegram group](https://t.me/joinchat/SKXDx6mokoQ4MmVk).
 
 
 ## Copyright and License
