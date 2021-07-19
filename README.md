@@ -9,7 +9,13 @@ The ugliest project participating to the [DigitalOcean MongoDB Hackathon](https:
 
 If you need some inspiration, look at this blobfish!
 
-## Running blobfishes
+
+## Deploying blobfishes to DigitalOcean
+
+Please see [this document](./docs/deploy-blobfishes-to-digitalocean.md).
+
+
+## Running blobfishes in Docker
 
 Prerequisites:
 
@@ -22,10 +28,10 @@ Run the following command from a shell:
 docker-compose up -d
 ```
 
-### Rebuilding images from scratch
+### Rebuilding the updated version of the Docker images
 
 ```bash
-docker-compose up --build --force-recreate
+docker-compose build --pull --no-cache
 ```
 
 ### Local client development
@@ -42,9 +48,13 @@ npm install
 npm run dev
 ```
 
-## Communications
 
-Use the [Telegram group](https://t.me/joinchat/SKXDx6mokoQ4MmVk)
+## How to submit bugs and/or questions
+
+Please create issues under <https://github.com/aquariophilie/blobfishes/issues>.
+
+For quick communications with the project maintainers use the [Telegram group](https://t.me/joinchat/SKXDx6mokoQ4MmVk).
+
 
 ## Copyright and License
 
