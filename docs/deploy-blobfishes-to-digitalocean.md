@@ -4,11 +4,11 @@
 
 * Introduction
 * Reference documents
-* Deploy blobfishes as a DigitalOcean Droplet
-  - Log in to DigitalOcean
+* Prerequisites
+* Deploy blobfishes to DigitalOcean using Droplets
   - Create a project on DigitalOcean
   - Spin a MongoDB cluster on DigitalOcean
-  - Create a VM on DigitalOcean with Ubuntu-server 20.04.2 LTS 64-bit
+  - Create a Droplet on DigitalOcean
   - Login to the VM via SSH
   - Install Docker and docker-compose
   - Clone blobfishes sources from GitHub
@@ -17,8 +17,13 @@
   - Test blobfish webapp locally
   - Open incoming ports on the VM
   - Test webapp remotely using a browser <http://vm_ip_address:3000>
-* Deploy blobfishes as a DigitalOcean App
+* Deploy blobfishes to DigitalOcean inside an App
 * See also
+
+
+## Introduction
+ 
+This document explains how to perform a deployment of the blobfishes project to the [DigitalOcean](https://www.digitalocean.com/) cloud.
 
 
 ## Reference documents
@@ -39,21 +44,22 @@
   - [Deploy on DigitalOcean](https://cloud.digitalocean.com/apps/new?repo=https://github.com/do-community/node-express-api/tree/master)
 
 
-## Introduction
- 
-This document explains how to install the blobfishes project on the [DigitalOcean](https://www.digitalocean.com/) cloud.
+## Prerequisites
 
+* A valid login to DigitalOcean
+* Access to blobfishes sources on GitHub
 
-## Deploy blobfishes as a DigitalOcean Droplet
+## Deploy blobfishes to DigitalOcean using Droplets
 
-
-### Log in to DigitalOcean
-
-Log in to <https://cloud.digitalocean.com/>
+Droplets are the DigitalOcean equivalent of AWS EC2 instances, or Azure VMs.
 
 ### Create a project on DigitalOcean
 
-Logged into the DigitalOcean console, expand section "PROJECTS", then click "New Project"
+Log in to <https://cloud.digitalocean.com/> to access the DigitalOcean console.
+
+<!-- TODO: Screenshot -->
+
+Expand section "PROJECTS", then click "New Project".
 
 > **Create new project**
 >
@@ -181,10 +187,11 @@ Then click "Create a Database Cluster".
 
 TODO
 
-
-### Create a VM on DigitalOcean with Ubuntu-server 20.04.2 LTS 64-bit
+### Create a Droplet on DigitalOcean
 
 TODO
+
+* Ubuntu-server 20.04.2 LTS 64-bit
 
 ### Login to the VM via SSH
 
@@ -250,7 +257,7 @@ TODO
 TODO
 
 
-## Deploy blobfishes as a DigitalOcean App
+## Deploy blobfishes to DigitalOcean inside an App
 
 TODO
 
