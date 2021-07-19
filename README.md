@@ -16,27 +16,45 @@ Please see [this document](./docs/deploy-blobfishes-to-digitalocean.md).
 
 ## Running blobfishes in Docker
 
-Prerequisites:
+### Prerequisites
 
 * [Docker](https://www.docker.com/) version 20.10.6 or later
-* [Docker Compose](https://docs.docker.com/compose/) version 1.21.2 or later
-
-**IMPORTANT**: Make sure that Docker is configured to be managed as an ordinary (non-root) user.
+  - Make sure that Docker is configured to be managed as an ordinary (non-root) user.
 See <https://docs.docker.com/engine/install/linux-postinstall/> for details.
+* [Docker Compose](https://docs.docker.com/compose/) version 1.21.2 or later
+* Credentials to connect to an existing [MongoDB](https://www.mongodb.com/) instance
+  - For development purposes you may use a one-node instance running on your local Docker engine.
 
-Run the following command from a shell:
+### Create and run the containers
 
-```bash
-docker-compose up -d
-```
+1. Check out the sources from GitHub.
 
-You may check the server logs with the following command (type Ctrl-C to stop):
+2. Create file `.env` starting from the `.env.example` available in the repository and insert the credentials to connect to your MongoDB instance editing the lines which start with `MONGODB_`:
 
-```bash
-docker-compose logs -f
-```
+   ```bash
+   cp .env.example .env
+   vi .env
+   ```
 
-### Rebuilding the updated version of the Docker images
+3. Run the following command from a shell to create and run the containers:
+
+   ```bash
+   docker-compose up -d
+   ```
+
+4. You may check the server logs with the following command (type Ctrl-C to stop):
+
+   ```bash
+   docker-compose logs -f
+   ```
+
+5. To shut down the server run the following command
+
+   ```bash
+   docker-compose down
+   ```
+
+### Rebuild the updated version of the Docker images
 
 ```bash
 docker-compose build --pull --no-cache
