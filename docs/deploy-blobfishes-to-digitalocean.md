@@ -6,7 +6,7 @@
 * Reference documents
 * Prerequisites
 * Deploy blobfishes to DigitalOcean using Droplets
-  - Create a project on DigitalOcean
+  - Create a new Project on DigitalOcean
   - Spin a MongoDB cluster on DigitalOcean
   - Create a Droplet on DigitalOcean
   - Login to the VM via SSH
@@ -57,7 +57,7 @@ This document explains how to perform a deployment of the blobfishes project to 
 
 In DigitalOcean cloud, a Droplet can be seen as the rough equivalent of an EC2 (Elastic Compute Cloud) instance in [AWS](https://aws.amazon.com/), or of a VM (Virtual Machine) in [Microsoft Azure](https://azure.microsoft.com/) and [Google Cloud Platform](https://cloud.google.com/).
 
-### Create a project on DigitalOcean
+### Create a new Project on DigitalOcean
 
 Sign in to <https://cloud.digitalocean.com/> to access the DigitalOcean console.
 
@@ -197,7 +197,139 @@ TODO
 
 TODO
 
-* Ubuntu-server 20.04.2 LTS 64-bit
+Logged into the DigitalOcean console, expand section "PROJECTS", then click on "blobfishes".
+
+Click "Get Started with a Droplet".
+
+> **Create Droplets**
+>
+> **Choose an image**
+>
+> * Distributions
+> * Container distributions
+> * Marketplace
+> * Custom images
+>
+> **Choose a plan**
+>
+> * SHARED CPU
+>   - Basic
+> * DEDICATED CPU
+>   - General Purpose
+>   - CPU-Optimized
+>   - Memory-Optimized
+>   - Storage-Optimized (NEW)
+>
+> CPU options:
+> - [x] Regular Intel with SSD
+> - [ ] Premium Intel with NVMe SSD (NEW)
+>
+> * $5/mo ($0.007/hour)
+>   - 1 GB / 1 CPU
+>   - 25 GB SSD Disk
+>   - 1000 GB transfer
+> * $10/mo ($0.015/hour)
+>   - 2 GB / 1 CPU
+>   - 50 GB SSD Disk
+>   - 2 TB transfer
+> * $15/mo ($0.022/hour)
+>   - 2 GB / 2 CPUs
+>   - 60 GB SSD Disk
+>   - 3 TB transfer
+>
+> Our Basic Droplet plans, formerly called Standard Droplet plans, range from 1 GB of RAM to 16 GB of RAM. General Purpose Droplets have more overall resources and are best for production environment, and Memory-Optimized Droplets have more RAM and disk options for RAM intensive applications.
+>
+> Each Droplet plan includes free outbound data transfer which is shared between all Droplets each billing cycle. Inbound bandwidth to Droplets is always free. Learn more or try our price calculator.
+>
+> **Add block storage**
+>
+> * [Add Volume]()
+>
+> **Choose a datacenter region**
+>
+> * New York
+> * San Francisco
+> * Amsterdam
+> * Singapore
+> * London
+> * Frankfurt
+> * Toronto
+> * Bangalore
+>
+> **VPC Network**
+>
+> * `default-nyc1` (DEFAULT)
+>
+> **Select additional options**
+>
+> - [ ] IPv6
+> - [ ] User data
+> - [ ] Monitoring
+>
+> **Authentication**
+>
+> * SSH keys<br>
+>   A more secure authentication method
+>
+> * Password<br>
+>   Create a root password to access Droplet (less secure)
+>
+> **Finalize and create**
+>
+> * How many Droplets?<br>
+>   Deploy multiple Droplets with the same configuration.
+>
+> * Choose a hostname<br>
+>   Give your Droplets an identifying name you will remember them by.
+>   Your Droplet name can only contain alphanumeric characters, dashes, and periods.
+>
+> **Add tags**
+>
+> Use tags to organize and relate resources.
+> Tags may contain letters, numbers, colons, dashes, and underscores.
+>
+> **Select Project**
+>
+> Assign Droplets to a project
+>
+> **Add backups**
+>
+> * [ ] Enable backups
+>   $1.00/mo (per Droplet)
+>   20% of the Droplet price
+>   A system-level backup is taken once a week, and each backup is retained for 4 weeks.
+
+Fill in the requested information
+
+* Choose the following image
+  * Distributions: Ubuntu 20.04 (LTS) x64
+
+* Choose the following plan
+  * SHARED CPU: Basic
+  * CPU options: Regular Intel with SSD
+  * Plan: $5/mo ($0.007/hour)
+
+* Add block storage: no
+
+* Choose a datacenter region: Frankfurt 1
+
+* VPC Network: `default-fra1` (DEFAULT)
+
+* Select additional options: (none)
+
+* Authentication: SSH keys
+
+* Finalize and create
+  - How many Droplets? 1
+  - Choose a hostname: (accept proposed value)
+
+* Add tags: TODO
+
+* Select Project: TODO
+
+* Add backups: (no)
+
+then click "Create Droplet"
 
 ### Login to the VM via SSH
 
