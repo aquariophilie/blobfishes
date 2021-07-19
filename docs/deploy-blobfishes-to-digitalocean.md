@@ -41,21 +41,25 @@ This document explains how to perform a deployment of the blobfishes project to 
   - [Atlas video -From SQL to NoSQL, Changing Your Mindset...](https://youtu.be/4TdVcfh1Kk8) - by MongoDB (40:46 YouTube Video)
 * <https://github.com/do-community/mongodb-resources>
 * <https://github.com/do-community/node-express-api>
-  - [Deploy on DigitalOcean](https://cloud.digitalocean.com/apps/new?repo=https://github.com/do-community/node-express-api/tree/master)
+  - [Deploy to DigitalOcean](https://cloud.digitalocean.com/apps/new?repo=https://github.com/do-community/node-express-api/tree/master)
 
 
 ## Prerequisites
 
-* A valid login to DigitalOcean
+* A valid login to [DigitalOcean cloud](https://cloud.digitalocean.com/)
 * Access to blobfishes sources on GitHub
 
 ## Deploy blobfishes to DigitalOcean using Droplets
 
-Droplets are the DigitalOcean equivalent of AWS EC2 instances, or Azure VMs.
+> Droplets? Are we spreading COVID-19 disease again???
+
+**Don't Panic!** Here we refer to [DigitalOcean Droplets](https://www.digitalocean.com/products/droplets/)!
+
+In DigitalOcean cloud, a Droplet can be seen as the rough equivalent of an EC2 (Elastic Compute Cloud) instance in [AWS](https://aws.amazon.com/), or of a VM (Virtual Machine) in [Microsoft Azure](https://azure.microsoft.com/) and [Google Cloud Platform](https://cloud.google.com/).
 
 ### Create a project on DigitalOcean
 
-Log in to <https://cloud.digitalocean.com/> to access the DigitalOcean console.
+Sign in to <https://cloud.digitalocean.com/> to access the DigitalOcean console.
 
 <!-- TODO: Screenshot -->
 
