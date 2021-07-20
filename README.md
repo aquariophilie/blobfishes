@@ -1,4 +1,4 @@
-# :blowfish: blobfishes :blowfish:
+# blobfishes :blowfish: :blowfish:
 
 ![Superlinter](https://github.com/gmacario/blobfishes/actions/workflows/superlinter.yml/badge.svg)
 
@@ -18,7 +18,7 @@ Please see [this document](./docs/deploy-blobfishes-to-digitalocean.md).
 
 ### Prerequisites
 
-* [Docker](https://www.docker.com/) version 20.10.6 or later
+* :whale2: [Docker](https://www.docker.com/) version 20.10.6 or later
   - Make sure that Docker is configured to be managed as an ordinary (non-root) user.
 See <https://docs.docker.com/engine/install/linux-postinstall/> for details.
 * [Docker Compose](https://docs.docker.com/compose/) version 1.21.2 or later
