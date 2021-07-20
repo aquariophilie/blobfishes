@@ -14,7 +14,7 @@ If you need some inspiration to be ugly, look at this blobfish!
 Please see [this document](./docs/deploy-blobfishes-to-digitalocean.md).
 
 
-## Running blobfishes in Docker
+## Running blobfishes in Docker <span class="iconify" data-icon="mdi-docker" data-inline="false"></span>
 
 ### Prerequisites
 
