@@ -33,6 +33,8 @@ This document explains how to perform a deployment of the blobfishes project to 
 * [DigitalOcean Documentation](https://docs.digitalocean.com/)
   - [Managed Databases](https://docs.digitalocean.com/products/databases/) - DigitalOcean Documentation
   - [MongoDB](https://docs.digitalocean.com/products/databases/mongodb/) - DigitalOcean Documentation
+* [The DigitalOcean Community](https://www.digitalocean.com/community)
+  - [Making a Node + MongoDB App on DigitalOcean | DigitalOcean](https://www.digitalocean.com/community/tech_talks/making-a-node-mongodb-app-on-digitalocean)
 * [MongoDB.live | July 13-14, 2021](https://www.mongodb.com/live)
   - [MongoDB.live 2021 On-Demand Sessionso](https://www.youtube.com/playlist?list=PL4RCxklHWZ9ubJ-RLYZ5GFnu23ccml_Cq) (83 videos)
   - [MongoDB.live Playlist Instructions](https://youtu.be/p5kcUrhl8Kc) - by MongoDB (3:00 YouTube Video)
