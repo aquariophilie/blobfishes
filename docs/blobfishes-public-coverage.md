@@ -11,8 +11,8 @@ Please when contributing entries to this page:
 
 ## Twitter
 
-* <https://twitter.com/aquariophilie1/status/1417341974085087232>
-* <https://twitter.com/gpmacario/status/1417341616017264642>
+* <https://twitter.com/aquariophilie1/status/1417344965181591569>
+* <https://twitter.com/gpmacario/status/1417344358458839041>
 
 ## Misc
 
