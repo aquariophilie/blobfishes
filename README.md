@@ -9,7 +9,7 @@ Blobfishes aims to be the ugliest project participating to the [DigitalOcean Mon
 If you need some inspiration to be ugly, look at this blobfish!
 
 
-## Deploying blobfishes to DigitalOcean
+## Deploying blobfishes to DigitalOcean :ocean:
 
 Please see [this document](./docs/deploy-blobfishes-to-digitalocean.md).
 
