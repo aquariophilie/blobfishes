@@ -195,7 +195,7 @@ TODO
 
 ### Create a Droplet on DigitalOcean
 
-TODO
+<!-- 2021-07-20 02:01 CEST -->
 
 Logged into the DigitalOcean console, expand section "PROJECTS", then click on "blobfishes".
 
@@ -319,19 +319,88 @@ Fill in the requested information
 
 * Authentication: SSH keys
 
+  - Choose your SSH keys
+  - If you have never provided any SSH keys to Digital Ocean,
+    click "New SSH Key"
+
+    > **Add public SSH key**
+    >
+    > Copy your public SSH key and paste it in the space below.
+    > For instructions on how, follow the steps on the right.
+    >
+    > - SSH key content: `___`
+    > - Name: `___`
+
+    paste your public SSH key and a meaningful name, then click "Add SSH Key"
+
 * Finalize and create
   - How many Droplets? 1
-  - Choose a hostname: (accept proposed value)
+  - Choose a hostname: `ubuntu-s-1vcpu-1gb-fra1-01` (accept proposed value)
 
-* Add tags: TODO
+* Add tags: `blobfishes`, `ubuntu`
 
-* Select Project: TODO
+* Select Project: `blobfishes`
 
 * Add backups: (no)
 
 then click "Create Droplet"
 
+As soon as the Droplet is created you should find its name with a green icon and its public IP address.
+
+<!-- TODO: Add screenshot -->
+
+
 ### Login to the VM via SSH
+
+<!-- 2021-07-20 02:09 CEST -->
+
+Log in to the VM instance via SSH
+
+```bash
+ssh -i <ssh_key> root@<vm_public_ip>
+```
+
+Result:
+
+```text
+gmacario@gmpowerhorse:~ $ ssh -i ~/.ssh/gmacario-gmail-com root@64.225.96.211
+The authenticity of host '64.225.96.211 (64.225.96.211)' can't be established.
+ECDSA key fingerprint is SHA256:g7NvixKU7nMFTGK5KErXncP99tb8K/jeT4w1Q4NNqRs.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added '64.225.96.211' (ECDSA) to the list of known hosts.
+Enter passphrase for key '/home/gmacario/.ssh/gmacario-gmail-com': 
+Welcome to Ubuntu 20.04.2 LTS (GNU/Linux 5.4.0-73-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Tue Jul 20 00:14:34 UTC 2021
+
+  System load:  0.01              Users logged in:       0
+  Usage of /:   5.8% of 24.06GB   IPv4 address for eth0: 64.225.96.211
+  Memory usage: 18%               IPv4 address for eth0: 10.19.0.5
+  Swap usage:   0%                IPv4 address for eth1: 10.114.0.4
+  Processes:    102
+
+16 updates can be applied immediately.
+5 of these updates are standard security updates.
+To see these additional updates run: apt list --upgradable
+
+
+The list of available updates is more than a week old.
+To check for new updates run: sudo apt update
+
+
+The programs included with the Ubuntu system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by
+applicable law.
+
+root@ubuntu-s-1vcpu-1gb-fra1-01:~#
+```
 
 TODO
 
