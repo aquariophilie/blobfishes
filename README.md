@@ -1,4 +1,4 @@
-# blobfishes
+# blobfishes :blowfish:
 
 ![Superlinter](https://github.com/gmacario/blobfishes/actions/workflows/superlinter.yml/badge.svg)
 
