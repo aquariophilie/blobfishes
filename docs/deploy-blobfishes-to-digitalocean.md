@@ -746,7 +746,7 @@ docker-compose logs
 
 ### Test blobfish webapp locally
 
-TODO
+<!-- 2021-07-20 22:59 CEST -->
 
 ```bash
 curl -v http://localhost:3000/
@@ -755,7 +755,26 @@ curl -v http://localhost:3000/
 Result:
 
 ```text
-TODO
+root@ubuntu-s-1vcpu-1gb-fra1-01:~# curl -v http://localhost:3000/
+*   Trying 127.0.0.1:3000...
+* TCP_NODELAY set
+* Connected to localhost (127.0.0.1) port 3000 (#0)
+> GET / HTTP/1.1
+> Host: localhost:3000
+> User-Agent: curl/7.68.0
+> Accept: */*
+> 
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 404 Not Found
+< Vary: Origin
+< Content-Type: text/plain; charset=utf-8
+< Content-Length: 9
+< Date: Tue, 20 Jul 2021 21:00:08 GMT
+< Connection: keep-alive
+< Keep-Alive: timeout=5
+< 
+* Connection #0 to host localhost left intact
+root@ubuntu-s-1vcpu-1gb-fra1-01:~#
 ```
 
 ### Open incoming ports on the VM
