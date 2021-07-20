@@ -9,7 +9,8 @@
   - Create a new Project on DigitalOcean
   - Spin a MongoDB cluster on DigitalOcean
   - Create a Droplet on DigitalOcean
-  - Login to the VM via SSH
+  - Login to the VM via SSH and update OS
+  - (Optional) Register a DNS A record
   - Install Docker and `docker-compose`
   - Clone blobfishes sources from GitHub
   - Create file `.env` with connection info to the MongoDB instance
@@ -352,14 +353,14 @@ As soon as the Droplet is created you should find its name with a green icon and
 <!-- TODO: Add screenshot -->
 
 
-### Login to the VM via SSH
+### Login to the VM via SSH and update OS
 
 <!-- 2021-07-20 02:09 CEST -->
 
 Log in to the VM instance via SSH
 
 ```bash
-ssh -i <ssh_key> root@<vm_public_ip>
+ssh -i <ssh_identity_file> root@<vm_public_ip>
 ```
 
 Result:
@@ -404,9 +405,53 @@ applicable law.
 root@ubuntu-s-1vcpu-1gb-fra1-01:~#
 ```
 
-TODO
+Update the OS and reboot if requested
+
+```bash
+sudo apt update && sudo apt -y dist-upgrade && sudo apt -y autoremove --purge
+sudo reboot
+```
+
+### (Optional) Register a DNS A record
+
+<!-- 2021-07-20 21:44 CEST -->
+
+If you have edit permissions on some DNS zones you may register an A record for the public IP address of the Droplet which you have just created.
+
+Example: "blobfish.aquariophilie.fun" --> 64.225.96.211
+
+Notice that the DNS zone propagation may take a few minutes.
+
+Test that DNS update was successful
+
+```bash
+ping blobfish.aquariophilie.fun
+```
+
+Result:
+
+```text
+gmacario@gmpowerhorse:~ $ ping blobfish.aquariophilie.fun
+PING blobfish.aquariophilie.fun (64.225.96.211) 56(84) bytes of data.
+64 bytes from 64.225.96.211 (64.225.96.211): icmp_seq=1 ttl=49 time=25.3 ms
+64 bytes from 64.225.96.211 (64.225.96.211): icmp_seq=2 ttl=49 time=24.0 ms
+64 bytes from 64.225.96.211 (64.225.96.211): icmp_seq=3 ttl=49 time=24.5 ms
+^C
+--- blobfish.aquariophilie.fun ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2003ms
+rtt min/avg/max/mdev = 24.021/24.590/25.282/0.522 ms
+gmacario@gmpowerhorse:~ $
+```
+
+Login to the VM via SSH to perform the next steps
+
+```bash
+ssh -i <ssh_identity_file> root@blobfish.aquariophilie.fun
+```
 
 ### Install Docker and `docker-compose`
+
+Follow the instructions at <https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-20-04>
 
 TODO
 
@@ -467,6 +512,8 @@ TODO
 ### Test webapp remotely using a browser <http://vm_ip_address:3000>
 
 TODO
+
+Open <http://blobfish.aquariophilie.fun:3000/>
 
 
 ## Deploy blobfishes to DigitalOcean inside an App
