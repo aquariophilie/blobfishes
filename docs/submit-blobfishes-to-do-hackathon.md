@@ -17,14 +17,18 @@ TODO
 >   - `Blobfishes - The ugliest project participating to the DigitalOcean MongoDB Hackathon`
 > * Link to my live app *<br>
 >   Deploy your app to DigitalOcean and add the link here:
->   - `TODO`
+>   - `http://blobfishes.aquariophilie.fun:3000/`
 > * Link to my GitHub repo *<br>
 >   Make sure the repo is public and the license is MIT, Apache, BSD-2, BSD-3, or Commons Clause.
->   - `https://github.com/aquariophilie/blobfish`
+>   - `https://github.com/aquariophilie/blobfishes`
 > * Articles I wrote about my app<br>
 >   Add a link on a new line
 >   - `https://gmacario.github.io/posts/2021-07-17-our-journey-to-do-mongodb-hackathon`
 >   - `https://gmacario.github.io/posts/2021-07-20-blobfishes-submitted-to-mongodb-hackathon`
+>   - `https://github.com/aquariophilie/blobfishes/blob/main/docs/deploy-blobfishes-to-digitalocean.md`
+> * Did you have team members?<br>
+>   Enter their DigitalOcean email addresses here
+>   - `_TODO_`
 
 Click "Next".
 
