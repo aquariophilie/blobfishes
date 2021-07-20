@@ -1,4 +1,4 @@
-# blobfishes
+# blobfishes :blowfish: :blowfish:
 
 ![Superlinter](https://github.com/gmacario/blobfishes/actions/workflows/superlinter.yml/badge.svg)
 
@@ -9,16 +9,16 @@ Blobfishes aims to be the ugliest project participating to the [DigitalOcean Mon
 If you need some inspiration to be ugly, look at this blobfish!
 
 
-## Deploying blobfishes to DigitalOcean
+## Deploying blobfishes to DigitalOcean :ocean:
 
 Please see [this document](./docs/deploy-blobfishes-to-digitalocean.md).
 
 
-## Running blobfishes in Docker
+## Running blobfishes :blowfish: in Docker :whale:
 
 ### Prerequisites
 
-* [Docker](https://www.docker.com/) version 20.10.6 or later
+* :whale2: [Docker](https://www.docker.com/) version 20.10.6 or later
   - Make sure that Docker is configured to be managed as an ordinary (non-root) user.
 See <https://docs.docker.com/engine/install/linux-postinstall/> for details.
 * [Docker Compose](https://docs.docker.com/compose/) version 1.21.2 or later
@@ -85,7 +85,7 @@ npm run dev
 
 Please create issues under <https://github.com/aquariophilie/blobfishes/issues>.
 
-For quick communications with the project maintainers use the [Telegram group](https://t.me/joinchat/SKXDx6mokoQ4MmVk).
+For quick communications with the project maintainers use this [Telegram group](https://t.me/joinchat/SKXDx6mokoQ4MmVk).
 
 
 ## Copyright and License
