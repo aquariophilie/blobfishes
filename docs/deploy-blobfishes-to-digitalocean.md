@@ -194,7 +194,6 @@ Then click "Create a Database Cluster".
 
 <!-- TODO: Add screenshot -->
 
-TODO
 
 ### Create a Droplet on DigitalOcean
 
@@ -720,6 +719,30 @@ Creating blobfishes_static-pages_1 ... done
 Creating blobfishes_server_1       ... done
 root@ubuntu-s-1vcpu-1gb-fra1-01:~/github/aquariophilie/blobfishes#
 ```
+
+Verify that the services are up and running
+
+```bash
+docker-compose ps
+```
+
+Result:
+
+```
+root@ubuntu-s-1vcpu-1gb-fra1-01:~/github/aquariophilie/blobfishes# docker-compose ps
+          Name                         Command               State                     Ports                  
+--------------------------------------------------------------------------------------------------------------
+blobfishes_server_1         docker-entrypoint.sh node  ...   Up       0.0.0.0:3000->3000/tcp,:::3000->3000/tcp
+blobfishes_static-pages_1   docker-entrypoint.sh ls -l ...   Exit 0                                           
+root@ubuntu-s-1vcpu-1gb-fra1-01:~/github/aquariophilie/blobfishes#
+```
+
+You can use "docker-compose logs ..." for troubleshooting services startup errors
+
+```bash
+docker-compose logs
+```
+
 
 ### Test blobfish webapp locally
 
