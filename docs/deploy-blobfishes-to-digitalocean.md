@@ -5,20 +5,21 @@
 * Introduction
 * Reference documents
 * Prerequisites
-* Deploy blobfishes to DigitalOcean using Droplets
+* Deploy blobfishes to DigitalOcean in a Droplet
   - Create a new Project on DigitalOcean
-  - Spin a MongoDB cluster on DigitalOcean
-  - Create a Droplet on DigitalOcean
-  - Login to the VM via SSH and update OS
+  - Spin a MongoDB cluster
+  - Create a Droplet
+  - Login via SSH and update OS
   - (Optional) Register a DNS A record
-  - Install Docker and `docker-compose`
-  - Clone blobfishes sources from GitHub
-  - Create file `.env` with connection info to the MongoDB instance
-  - Bring up blobfish webapp using `docker-compose`
+  - Install Docker
+  - Install Docker Compose
+  - Check out blobfishes sources
+  - Create and customize the `.env` file
+  - Bring up the blobfish webapp
   - Test blobfish webapp locally
   - Open incoming ports on the VM
-  - Test webapp remotely using a browser <http://vm_ip_address:3000>
-* Deploy blobfishes to DigitalOcean inside an App
+  - Test webapp remotely using a browser
+<!-- * Deploy blobfishes to DigitalOcean inside an App -->
 * See also
 
 
@@ -52,7 +53,7 @@ This document explains how to perform a deployment of the blobfishes project to 
 * A valid login to [DigitalOcean cloud](https://cloud.digitalocean.com/)
 * Access to blobfishes sources on GitHub
 
-## Deploy blobfishes to DigitalOcean using Droplets
+## Deploy blobfishes to DigitalOcean in a Droplet
 
 > Droplets? Are we spreading COVID-19 disease again???
 
@@ -99,7 +100,7 @@ Click "Skip for now".
 
 Click "Remind me later".
 
-### Spin a MongoDB cluster on DigitalOcean
+### Spin a MongoDB cluster
 
 Logged into the DigitalOcean console, expand section "MANAGE", then click "Databases".
 
@@ -195,7 +196,7 @@ Then click "Create a Database Cluster".
 <!-- TODO: Add screenshot -->
 
 
-### Create a Droplet on DigitalOcean
+### Create a Droplet
 
 <!-- 2021-07-20 02:01 CEST -->
 
@@ -352,7 +353,7 @@ As soon as the Droplet is created you should find its name with a green icon and
 <!-- TODO: Add screenshot -->
 
 
-### Login to the VM via SSH and update OS
+### Login via SSH and update OS
 
 <!-- 2021-07-20 02:09 CEST -->
 
@@ -417,26 +418,26 @@ sudo reboot
 
 If you have edit permissions on some DNS zones you may register an A record for the public IP address of the Droplet which you have just created.
 
-Example: "blobfish.aquariophilie.fun" --> 64.225.96.211
+Example: "blobfishes.aquariophilie.fun" --> 64.225.96.211
 
 Notice that the DNS zone propagation may take a few minutes.
 
 Test that DNS update was successful
 
 ```bash
-ping blobfish.aquariophilie.fun
+ping blobfishes.aquariophilie.fun
 ```
 
 Result:
 
 ```text
-gmacario@gmpowerhorse:~ $ ping blobfish.aquariophilie.fun
-PING blobfish.aquariophilie.fun (64.225.96.211) 56(84) bytes of data.
+gmacario@gmpowerhorse:~ $ ping blobfishes.aquariophilie.fun
+PING blobfishes.aquariophilie.fun (64.225.96.211) 56(84) bytes of data.
 64 bytes from 64.225.96.211 (64.225.96.211): icmp_seq=1 ttl=49 time=25.3 ms
 64 bytes from 64.225.96.211 (64.225.96.211): icmp_seq=2 ttl=49 time=24.0 ms
 64 bytes from 64.225.96.211 (64.225.96.211): icmp_seq=3 ttl=49 time=24.5 ms
 ^C
---- blobfish.aquariophilie.fun ping statistics ---
+--- blobfishes.aquariophilie.fun ping statistics ---
 3 packets transmitted, 3 received, 0% packet loss, time 2003ms
 rtt min/avg/max/mdev = 24.021/24.590/25.282/0.522 ms
 gmacario@gmpowerhorse:~ $
@@ -445,7 +446,7 @@ gmacario@gmpowerhorse:~ $
 Login to the VM via SSH to perform the next steps
 
 ```bash
-ssh -i <ssh_identity_file> root@blobfish.aquariophilie.fun
+ssh -i <ssh_identity_file> root@blobfishes.aquariophilie.fun
 ```
 
 Result:
@@ -474,9 +475,7 @@ root@ubuntu-s-1vcpu-1gb-fra1-01:~#
 ```
 
 
-### Install Docker and `docker-compose`
-
-#### Install Docker
+### Install Docker
 
 Follow the instructions at <https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-20-04>
 
@@ -485,7 +484,7 @@ Prerequisites: Logged in on the VM
 <!-- 2021-07-20 22:00 CEST -->
 
 ```bash
-ssh -i <ssh_identity_file> root@blobfish.aquariophilie.fun
+ssh -i <ssh_identity_file> root@blobfishes.aquariophilie.fun
 ```
 
 Update packages and install Docker
@@ -620,7 +619,7 @@ Server: Docker Engine - Community
 root@ubuntu-s-1vcpu-1gb-fra1-01:~#
 ```
 
-#### Install docker-compose 
+### Install Docker Compose 
 
 Follow the instructions at <https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-compose-on-ubuntu-20-04>
 
@@ -648,7 +647,9 @@ root@ubuntu-s-1vcpu-1gb-fra1-01:~#
 ```
 
 
-### Clone blobfishes sources from GitHub
+### Check out blobfishes sources
+
+Check out the blobfishes sources from GitHub:
 
 ```bash
 mkdir -p ~/github/aquariophilie
@@ -673,9 +674,11 @@ root@ubuntu-s-1vcpu-1gb-fra1-01:~/github/aquariophilie#
 ```
 
 
-### Create file `.env` with connection info to the MongoDB instance
+### Create and customize the `.env` file
 
 <!-- 2021-07-20 22:35 CEST -->
+
+Create the `.env` file starting from `.env.example`:
 
 ```bash
 cd ~/github/aquariophilie/blobfishes
@@ -683,19 +686,21 @@ cp .env.example .env
 vi .env
 ```
 
-Edit the `MONGODB_xxx` variables - example:
+Edit the `MONGODB_xxx` variables with the information for connecting to the MongoDB instance - example:
 
 ```text
-MONGODB_NAME=TODO
+MONGODB_NAME=blobfishes
 MONGODB_PASS=dbpass
 MONGODB_URI=TODO
 MONGODB_USER=dbuser
 ```
 
 
-### Bring up blobfish webapp using `docker-compose`
+### Bring up the blobfish webapp
 
 <!-- 2021-07-20 22:35 CEST -->
+
+Bring up the blobfish webapp using `docker-compose up`
 
 ```bash
 cd ~/github/aquariophilie/blobfishes
@@ -779,22 +784,26 @@ root@ubuntu-s-1vcpu-1gb-fra1-01:~#
 
 ### Open incoming ports on the VM
 
-TODO
-
-### Test webapp remotely using a browser <http://vm_ip_address:3000>
-
-TODO
-
-Open <http://blobfish.aquariophilie.fun:3000/>
+**NOTE**: This step is not necessary with DigitalOcean.
 
 
+### Test webapp remotely using a browser
+
+<!-- 2021-07-20 23:15 CEST -->
+
+Open <http://blobfishes.aquariophilie.fun:3000/> from your favourite browser.
+
+<!-- TODO: Add screenshot -->
+
+<!-- 
 ## Deploy blobfishes to DigitalOcean inside an App
 
 TODO
+-->
 
 
 ## See also
 
-TODO
+* <https://github.com/aquariophilie/blobfishes>
  
  <!-- EOF -->
