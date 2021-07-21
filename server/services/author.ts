@@ -17,10 +17,7 @@ export class AuthorServiceImpl implements AuthorService {
         if (!this.authorModel.validate(authorData)) {
             throw createHttpError(400, 'Not valid data', { details: this.authorModel.validatorErrors });
         }
-        delete authorData._id;
-        if (authorData.birthday) {
-            authorData.birthday = new Date(authorData.birthday);
-        }
+        this.cleanFormatData(authorData);
         return this.authorModel.insert(authorData);
     }
 
@@ -32,10 +29,7 @@ export class AuthorServiceImpl implements AuthorService {
         if (!this.authorModel.validate(authorData)) {
             throw createHttpError(400, 'Not valid data', { details: this.authorModel.validatorErrors });
         }
-        delete authorData._id;
-        if (authorData.birthday) {
-            authorData.birthday = new Date(authorData.birthday);
-        }
+        this.cleanFormatData(authorData);
         return this.authorModel.update(id, authorData).then(res => authorData);
     }
 
@@ -58,6 +52,13 @@ export class AuthorServiceImpl implements AuthorService {
     async list(): Promise<IAuthor[]> {
         const data = await this.authorModel.findAll();
         return data;
+    }
+
+    cleanFormatData(authorData: IAuthor) {
+        delete authorData._id;
+        if (authorData.birthday) {
+            authorData.birthday = new Date(authorData.birthday);
+        }
     }
 
 }
