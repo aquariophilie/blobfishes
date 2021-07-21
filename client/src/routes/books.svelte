@@ -1,10 +1,33 @@
 <script>
   import axios from 'axios'
   import { onMount } from 'svelte';
+  import {
+    Button,
+    ButtonGroup,
+    Col,
+    Row,
+    Modal,
+    ModalBody,
+    ModalFooter,
+    ModalHeader,
+    Input,
+    Label,
+    Table,
+  } from "sveltestrap";
 
-  const apiPath = "/api/book"
+  const apiPath = "/api/book";
 
-  var books = []
+  var books = [];
+  var addBookForm = {
+    _id: "",
+    title: "",
+    authors: [],
+    owner: "",
+    genres: []
+  };
+
+  let addopen = false;
+  let updateopen = false;
 
   function getBooks() {
     axios.get(`${apiPath}`)
@@ -15,7 +38,8 @@
 
   function deleteBook(book) {
 		const path = `${apiPath}/${book.id}`;
-		axios.delete(path)
+		axios
+      .delete(path)
 			.then(() => {
 				getBooks();
 			})
@@ -23,10 +47,75 @@
 				console.error(error);
 				getBooks();
 			});
+
 	};
 
   function editBook(book) {
+    addBookForm._id = book._id;
+    addBookForm.title = book.title;
+    addBookForm.authors = book.authors;
+    addBookForm.owner = book.owner;
+    addBookForm.genres = book.genres;
+    updateopen = true;
+    addtoggle();
+  }
 
+  function addBook() {
+    const path = `${apiPath}`;
+    const payload = {
+      _id: addBookForm._id,
+      title: addBookForm.title,
+      authors: addBookForm.authors,
+      owner: addBookForm.owner,
+      genres: addBookForm.genres
+    };
+    axios
+      .post(path, payload)
+      .then(() => {
+        getBooks();
+      })
+      .catch((error) => {
+        console.error(error);
+        alert(error);
+        getBooks();
+      })
+      .finally(() => closeDialog());
+  }
+ 
+  function updateBook() {
+    const path = `${apiPath}/${addBookForm._id}`;
+    const payload = {
+      name: addBookForm.name,
+      authors: addBookForm.authors,
+      owner: addBookForm.owner,
+      genres: addBookForm.genres
+    };
+    axios
+      .put(path, payload)
+      .then(() => {
+        getBooks();
+      })
+      .catch((error) => {
+        console.error(error);
+        alert(error);
+        getBooks();
+      })
+      .finally(() => closeDialog());
+  }
+
+  function addtoggle() {
+    //	initForm();
+    addopen = !addopen;
+  }
+
+  function closeDialog() {
+    addBookForm._id = "";
+    addBookForm.name = "";
+    addBookForm.authors = [];
+    addBookForm.owner = "";
+    addBookForm.genres = [];
+    addopen = false;
+    updateopen = false;
   }
 
   onMount(getBooks)
@@ -95,3 +184,43 @@
     </div>
   </div>
 </div>
+<Modal isOpen={addopen} {addtoggle}>
+  <ModalHeader {addtoggle}
+    >{#if updateopen}Edit Book{:else}Add a new Book{/if}</ModalHeader
+  >
+  <ModalBody>
+    <Label for="newTitle">Title:</Label>
+    <Input
+      type="text"
+      bind:value={addBookForm.title}
+      placeholder="book title"
+    />
+    <p />
+    <Label for="newAuthor">Author:</Label>
+    <Input
+      type="text"
+      bind:value={addBookForm.authors}
+      placeholder="author name"
+    />
+    <p />
+    <Label for="newAuthor">Author:</Label>
+    <Input
+      type="text"
+      bind:value={addBookForm.owner}
+      placeholder="owner"
+    />
+    <Input
+      type="text"
+      bind:value={addBookForm.genres}
+      placeholder="genres"
+    />
+  </ModalBody>
+  <ModalFooter>
+    {#if updateopen}
+      <Button color="primary" on:click={updateBook}>Update author</Button>
+    {:else}
+      <Button color="primary" on:click={addBook}>Add author</Button>
+    {/if}
+    <Button color="secondary" on:click={closeDialog}>Cancel</Button>
+  </ModalFooter>
+</Modal>
