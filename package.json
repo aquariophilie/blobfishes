@@ -10,9 +10,11 @@
     "serve:server": "npm run build:server && nodemon dist/app.js",
     "serve:client": "cd client && npm run dev",
     "dev": "concurrently \"npm run serve:server\" \"npm run serve:client\"",
+    "build": "npm run build:client && npm run build:server",
     "build:server": "rm -rf ./dist/ && tsc",
     "build:client": "cd client && npm run build",
-    "serve:prod": "npm run build:client && npm run serve:server"
+    "serve:prod": "npm run build && NODE_ENV=production nodemon dist/app.js",
+    "serve:prod:win": "npm run build:client && npm run build:server && $env:NODE_ENV=\"production\" nodemon dist/app.js"
   },
   "repository": {
     "type": "git",
@@ -56,6 +58,7 @@
     "@types/jsonwebtoken": "^8.5.4",
     "@types/koa": "^2.13.4",
     "@types/koa-router": "^7.4.4",
+    "@types/koa-static": "^4.0.2",
     "@types/koa__cors": "^3.0.3",
     "@types/migrate-mongo": "^8.1.1",
     "@types/mongodb": "^3.6.20",
