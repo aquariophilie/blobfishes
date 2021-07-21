@@ -3,7 +3,6 @@ import koaBody from "koa-body";
 import jwt from "koa-jwt";
 import cors from "@koa/cors";
 
-import config from "../config";
 import route from '../api';
 import swagger from "../api/swagger";
 import errorHandler from "../api/middlewares/error-handler";
@@ -22,12 +21,12 @@ export default ({ app }: { app: Koa }) => {
     }
 
     const unlessPaths = [/^\/api\/auth/, "/", '/api/status'];
-    app.use(jwt({
+    /* app.use(jwt({
         secret: config.jwtSecret,
         algorithms: [config.jwtAlgorithm]
     }).unless({
         path: unlessPaths
-    }));
+    })); */
     
     // Load API routes
     console.log(route.stack.map(i => i.path));

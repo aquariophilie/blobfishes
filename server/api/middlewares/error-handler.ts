@@ -1,6 +1,4 @@
-import { HttpError } from "http-errors";
 import { Context, Next } from "koa";
-import { MongoError } from "mongodb";
 import Logger from "../../loaders/logger";
 
 export default async (ctx: Context, next: Next) => {
