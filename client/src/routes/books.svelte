@@ -2,7 +2,7 @@
   import axios from 'axios'
   import { onMount } from 'svelte';
 
-  const apiPath = "/api/books"
+  const apiPath = "/api/book"
 
   var books = []
 
