@@ -127,7 +127,7 @@
 </svelte:head>
 
 <h1>Books inside this ugly collection</h1>
-
+<Button color="success" on:click={addtoggle}>Add Book</Button>
 <div class="flex flex-col">
   <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
     <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">

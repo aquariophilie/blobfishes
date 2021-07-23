@@ -1,8 +1,8 @@
 version: '3'
 
 services:
-    static-pages:
-        build: client
+    # static-pages:
+    #    build: client
     server:
         build: .
         # restart: always
