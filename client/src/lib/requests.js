@@ -2,13 +2,13 @@ import axios from 'axios'
 
 const apiPath = '/api/author'
 
-function getAuthors() {
-    axios.get(`${apiPath}`)
-        .then((res) => {
-            return (res.data)
-        })
+function getAuthors () {
+  axios.get(`${apiPath}`)
+    .then((res) => {
+      return (res.data)
+    })
 }
 
 export default {
-    getAuthors
+  getAuthors
 }
