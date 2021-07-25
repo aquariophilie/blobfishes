@@ -1,6 +1,6 @@
-# Redeem your prize for completing the MongoDB Hackathon!
+# Redeem your prize for completing the MongoDB Hackathon
 
-<!-- 2021-07-23 -->
+<!-- 2021-07-23 02:24 CEST-->
 
 ## Mail received from DigitalOcean
 
@@ -27,9 +27,9 @@
 
 ## 👉 Redeem Your Prize
 
-(2021-07-25 09:39 CEST)
+<!-- 2021-07-25 09:39 CEST -->
 
-Browse <https://forms.gle/RdxG41NWaexszCgi9>
+Browse <https://forms.gle/xxxx>
 
 > **Redeem Your Hackathon Prize 🎉**
 >
@@ -74,6 +74,18 @@ Browse <https://forms.gle/RdxG41NWaexszCgi9>
 >
 > This form was created inside of DigitalOcean. [Report Abuse]()
 
-TODO
+Fill in the form, then click "Submit".
+
+> **Redeem Your Hackathon Prize 🎉**
+>
+> Thanks for participating in the DigitalOcean Hackathon.
+> We will process these quickly and send your shirt and stickers.
+> Please allow time for the shipment.
+>
+> [Edit your response]()
+> 
+> This form was created inside of DigitalOcean. [Report Abuse]()
+>
+> [Google Forms](https://www.google.com/forms/about)
 
 <!-- EOF -->
