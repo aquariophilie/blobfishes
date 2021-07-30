@@ -37,7 +37,7 @@
   }
 
   function deleteBook(book) {
-		const path = `${apiPath}/${book.id}`;
+		const path = `${apiPath}/${book._id}`;
 		axios
       .delete(path)
 			.then(() => {
@@ -217,9 +217,9 @@
   </ModalBody>
   <ModalFooter>
     {#if updateopen}
-      <Button color="primary" on:click={updateBook}>Update author</Button>
+      <Button color="primary" on:click={updateBook}>Update Book</Button>
     {:else}
-      <Button color="primary" on:click={addBook}>Add author</Button>
+      <Button color="primary" on:click={addBook}>Add Book</Button>
     {/if}
     <Button color="secondary" on:click={closeDialog}>Cancel</Button>
   </ModalFooter>
