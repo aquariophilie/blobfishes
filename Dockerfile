@@ -27,7 +27,7 @@ COPY . .
 RUN npm run build:server
 # RUN ls -la
 # RUN ls -laR dist/
-CMD ["node", "dist/app.js"]
+CMD ["npm", "run", "serve:prod"]
 # -----------------------------------------------------------------
 #
 # EOF

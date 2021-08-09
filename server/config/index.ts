@@ -49,5 +49,10 @@ export default {
     prefix: '/api',
   },
   apiKey: process.env.API_KEY || '',
-  appVersion: process.env.npm_package_version
+  appVersion: process.env.npm_package_version,
+
+  /** 
+   *  Public dir
+  */
+  publicDir: process.env.PUBLIC_DIR || ''
 };
