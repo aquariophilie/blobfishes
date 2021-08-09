@@ -19,16 +19,11 @@
 
   var authors = [];
   var addAuthorForm = {
-    id: "",
+    _id: "",
     name: "",
     bio: "",
   };
-  var editForm = {
-    _id: "",
-    title: "",
-    author: "",
-    description: "",
-  };
+
   let addopen = false;
   let updateopen = false;
 
@@ -72,9 +67,10 @@
       })
       .catch((error) => {
         console.error(error);
+        alert(error);
         getAuthors();
-      });
-    closeDialog();
+      })
+      .finally(() => closeDialog());
   }
 
   function updateAuthor() {

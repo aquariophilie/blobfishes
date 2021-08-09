@@ -24,10 +24,10 @@ COPY ["package.json", "package-lock.json*", "npm-shrinkwrap.json*", "./"]
 # RUN ls -laR
 RUN npm install --silent
 COPY . .
-RUN npm run build
+RUN npm run build:server
 # RUN ls -la
 # RUN ls -laR dist/
-CMD ["node", "dist/app.js"]
+CMD ["npm", "run", "serve:prod"]
 # -----------------------------------------------------------------
 #
 # EOF

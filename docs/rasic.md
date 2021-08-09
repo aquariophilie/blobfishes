@@ -2,11 +2,11 @@
 
 |Task|gmacario|Raffone17|GGn0|alv67|gteti|
 |--------------|-|-|-|-|-|
-|DB structure  |I| |R|S|S|
+|DB structure  |I|A|R|S|S|
 |Dev.frontend  |A|S|I|R|I|
-|Dev.backend   |I|R| |S|I|
-|Ops           |R| | |I|I|
-|Deploy        |R| | |I|I|
+|Dev.backend   |I|R|-|S|I|
+|Ops           |S|I|I|I|R|
+|Deploy        |R|I|I|I|I|
 |Documentation |R|I|S|S|S|
 
 ## Explanation
