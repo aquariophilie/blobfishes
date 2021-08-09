@@ -27,7 +27,7 @@ COPY . .
 RUN npm run build
 # RUN ls -la
 # RUN ls -laR dist/
-CMD ["npm", "run serve:prod"]
+CMD ["npm", "run", "serve:prod"]
 # -----------------------------------------------------------------
 #
 # EOF
