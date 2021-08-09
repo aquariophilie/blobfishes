@@ -10,7 +10,10 @@
     "serve:server": "npm run build:server && nodemon dist/app.js",
     "serve:client": "cd client && npm run dev",
     "dev": "concurrently \"npm run serve:server\" \"npm run serve:client\"",
-    "build:server": "rm -rf ./dist/ && tsc"
+    "build:server": "rm -rf ./dist/ && tsc",
+    "build:client": "cd client && npm run build",
+    "serve:prod": "npm run build:client && npm run serve:server",
+    "build": "npm run build:client && npm run build:server"
   },
   "repository": {
     "type": "git",
@@ -38,11 +41,13 @@
     "koa-jwt": "^4.0.1",
     "koa-logger": "^3.2.1",
     "koa-router": "^10.0.0",
+    "koa-static": "^5.0.0",
     "koa-swagger-decorator": "^1.7.5",
     "migrate-mongo": "^8.2.2",
     "mongodb": "^3.6.10",
     "reflect-metadata": "^0.1.13",
     "typescript-json-schema": "^0.49.0",
+    "ugly-frontend": "file:client",
     "winston": "^3.3.3",
     "winston-daily-rotate-file": "^4.5.5"
   },
