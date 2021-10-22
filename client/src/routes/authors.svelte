@@ -1,5 +1,4 @@
 <script>
-  import axios from "axios";
   import { onMount } from "svelte";
   import {
     Button,
@@ -14,8 +13,7 @@
     Label,
     Table,
   } from "sveltestrap";
-
-  const apiPath = "/api/author";
+  import { apiAuthor } from "../lib/api.author";
 
   var authors = [];
   var addAuthorForm = {
@@ -28,15 +26,13 @@
   let updateopen = false;
 
   function getAuthors() {
-    axios.get(`${apiPath}`).then((res) => {
+    apiAuthor.findAuthors().then((res) => {
       authors = res.data;
     });
   }
 
   function deleteAuthor(author) {
-    const path = `${apiPath}/${author._id}`;
-    axios
-      .delete(path)
+    apiAuthor.removeAuthor(author._id)
       .then(() => {
         getAuthors();
       })
@@ -55,13 +51,11 @@
   }
 
   function addAuthor() {
-    const path = `${apiPath}`;
     const payload = {
       name: addAuthorForm.name,
       bio: addAuthorForm.bio,
     };
-    axios
-      .post(path, payload)
+    apiAuthor.insertAuthor(payload)
       .then(() => {
         getAuthors();
       })
@@ -74,13 +68,11 @@
   }
 
   function updateAuthor() {
-    const path = `${apiPath}/${addAuthorForm._id}`;
     const payload = {
       name: addAuthorForm.name,
       bio: addAuthorForm.bio,
     };
-    axios
-      .put(path, payload)
+    apiAuthor.updateAuthor(addAuthorForm._id, payload)
       .then(() => {
         getAuthors();
       })

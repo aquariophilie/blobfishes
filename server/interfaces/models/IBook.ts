@@ -3,7 +3,7 @@ import { IModel } from "./IModel";
 export interface IBook {
     _id: string;
     title: string;
-    authors: { id: number, name: string }[];
+    authors: any[];
     genres: string[];
     location: string;
     owner: string;

@@ -16,11 +16,12 @@ export const AuthorSchema: Schema = {
     required: ["name"],
     additionalProperties: false,
 }
+const validatorSchema = addFormats(new Ajv().addKeyword('example')).compile(AuthorSchema);
 
 @injectable()
 export class AuthorModel extends Model<IAuthor> implements Author {
 
-    protected validator = addFormats(new Ajv().addKeyword('example')).compile(AuthorSchema);
+    protected validator = validatorSchema;
     protected collectionName: string = 'authors';
 
 }

@@ -1,3 +1,4 @@
+import { ObjectID } from "bson";
 import createHttpError from "http-errors";
 import { inject, injectable } from "inversify";
 
@@ -18,6 +19,9 @@ export class BookServiceImpl implements BookService {
             throw createHttpError(400, 'Not valid data', { details: this.bookModel.validatorErrors });
         }
         delete bookData._id;
+        if (bookData?.authors.length) {
+            bookData.authors = bookData.authors.map(id => new ObjectID(id));
+        }
         return this.bookModel.insert(bookData);
     }
 
@@ -28,6 +32,9 @@ export class BookServiceImpl implements BookService {
         }
         if (!this.bookModel.validate(bookData)) {
             throw createHttpError(400, 'Not valid data', { details: this.bookModel.validatorErrors });
+        }
+        if (bookData?.authors.length) {
+            bookData.authors = bookData.authors.map(id => new ObjectID(id));
         }
         delete bookData._id;
         return this.bookModel.update(id, bookData).then(res => bookData);
