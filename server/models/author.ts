@@ -22,6 +22,6 @@ const validatorSchema = addFormats(new Ajv().addKeyword('example')).compile(Auth
 export class AuthorModel extends Model<IAuthor> implements Author {
 
     protected validator = validatorSchema;
-    protected collectionName: string = 'authors';
+    protected collectionName = 'authors';
 
 }

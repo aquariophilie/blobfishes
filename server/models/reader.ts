@@ -28,6 +28,6 @@ export const ReaderSchema: Schema = {
 export class ReaderModel extends Model<IReader> implements Reader {
 
     protected validator = addFormats(new Ajv().addKeyword('example')).compile(ReaderSchema);
-    protected collectionName: string = 'readers';
+    protected collectionName = 'readers';
 
 }

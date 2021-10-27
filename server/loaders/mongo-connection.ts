@@ -3,7 +3,7 @@ import { Db, MongoClient } from 'mongodb';
 import config from '../config';
 
 export class MongoDBConnection {
-    private static isConnected: boolean = false;
+    private static isConnected = false;
     private static db: Db;
 
     public static async getConnection(): Promise<Db> {

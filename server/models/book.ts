@@ -32,7 +32,7 @@ const validatorSchema = new Ajv().addKeyword('example').compile(BookSchema);
 export class BookModel extends Model<IBook> implements Book {
 
     protected validator = validatorSchema;
-    protected collectionName: string = 'books';
+    protected collectionName = 'books';
 
     public async findAll(): Promise<IBook[]> {
         return this.aggregate((await this.collection)).toArray();
