@@ -1,7 +1,7 @@
 {
     "name": "blobfishes",
     "version": "0.1.0",
-    "description": "![Superlinter](https://github.com/gmacario/blobfishes/actions/workflows/superlinter.yml/badge.svg)",
+    "description": "The ugliest project participating to the DigitalOcean MongoDB Hackathon",
     "main": "index.js",
     "scripts": {
         "start": "dev",
