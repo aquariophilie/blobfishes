@@ -1,6 +1,6 @@
 # blobfishes :blowfish: :blowfish:
 
-![Superlinter](https://github.com/gmacario/blobfishes/actions/workflows/superlinter.yml/badge.svg)
+![Superlinter](https://github.com/aquariophilie/blobfishes/actions/workflows/linter.yml/badge.svg)
 
 Blobfishes aims to be the ugliest project participating to the [DigitalOcean MongoDB Hackathon](https://www.digitalocean.com/mongodb-hackathon/).  
 
