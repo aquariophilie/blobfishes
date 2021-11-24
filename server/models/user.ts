@@ -22,7 +22,7 @@ export class UserModel extends Model<IUser> implements User {
 
     protected validator = new Ajv().addKeyword('example').compile(Object.assign({ required: ["password"] }, UserSchema));
     protected validatorUpdate = new Ajv().addKeyword('example').compile(UserSchema);
-    protected collectionName: string = 'users';
+    protected collectionName = 'users';
 
     public async findByEmail(email: string): Promise<IUser | null> {
         return (await this.collection).findOne({ email });

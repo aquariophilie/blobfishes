@@ -1,6 +1,5 @@
 import Koa from "koa";
 import koaBody from "koa-body";
-import jwt from "koa-jwt";
 import cors from "@koa/cors";
 import serve from "koa-static";
 import path from "path";
@@ -26,8 +25,8 @@ export default ({ app }: { app: Koa }) => {
         app.use(swaggerRoute.routes()).use(swaggerRoute.allowedMethods());
     }
 
-    const unlessPaths = [/^\/api\/auth/, "/", '/api/status'];
-    /* app.use(jwt({
+    /* const unlessPaths = [/^\/api\/auth/, "/", '/api/status'];
+     app.use(jwt({
         secret: config.jwtSecret,
         algorithms: [config.jwtAlgorithm]
     }).unless({
@@ -40,7 +39,7 @@ export default ({ app }: { app: Koa }) => {
 
         function isRouteValid(url: string) {
             if (!validRoutes || !url) return false
-            const urlStart = url.split('/').filter(item => item)[0] || '';;
+            const urlStart = url.split('/').filter(item => item)[0] || '';
             return validRoutes.find(route => urlStart === route)
         }
         app.use(async (ctx, next) => {
